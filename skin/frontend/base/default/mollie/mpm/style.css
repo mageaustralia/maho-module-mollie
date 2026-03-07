@@ -1,0 +1,103 @@
+/**
+ * Copyright (c) 2012-2019, Mollie B.V.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * - Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * - Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE.
+ *
+ * @category    Mollie
+ * @package     Mollie_Mpm
+ * @author      Mollie B.V. (info@mollie.nl)
+ * @copyright   Copyright (c) 2012-2019 Mollie B.V. (https://www.mollie.nl)
+ * @license     http://www.opensource.org/licenses/bsd-license.php  Berkeley Software Distribution License (BSD-License 2)
+ **/
+
+
+.mollie-loading p {
+    margin-top: 20px;
+}
+
+.mollie-loading .redirect-block {
+    padding: 10%;
+    text-align: center;
+}
+
+.mollie-loading .loader {
+    border: 16px solid #E3F0FA;
+    border-top: 16px solid #31A8F0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sp-methods .payment-issuer-icon {
+    width: 27px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 5px 3px 5px 3px;
+    float: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mollie-component {
+    width: 90%;
+    background-color: #FFF;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #222;
+    transition: all .05s ease;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.mollie-component.is-invalid {
+    background-color: #FFF0F0;
+    box-shadow: 0px 1px 1px 0px rgba(255, 51, 68, 0.1), 0px 1px 3px 0px rgba(255, 51, 68, 0.1);
+}
+
+.payment-method-content .card-container {
+    max-width: 400px;
+    overflow: auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.component-error {
+    color: #FF0000;
+    display: none;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,48 @@
+{
+    "name": "mageaustralia/maho-module-mollie",
+    "license": "BSD-2-Clause",
+    "type": "maho-module",
+    "description": "Mollie payment gateway integration for Maho. Supports iDEAL, Credit Card, Bancontact, SOFORT, Bank Transfer, PayPal, Klarna, Apple Pay, and more.",
+    "keywords": [
+        "maho",
+        "mollie",
+        "payment",
+        "ideal",
+        "creditcard",
+        "apple-pay",
+        "bancontact",
+        "sofort",
+        "paypal",
+        "klarna",
+        "paysafecard",
+        "przelewy24",
+        "banktransfer",
+        "belfius",
+        "kbc",
+        "giftcard",
+        "in3",
+        "mybank",
+        "giropay",
+        "eps"
+    ],
+    "require": {
+        "php": ">=8.3",
+        "mahocommerce/maho": ">=24.12",
+        "mollie/mollie-api-php": "^2.1 || ^3.0"
+    },
+    "authors": [
+        {
+            "name": "Mollie B.V.",
+            "email": "info@mollie.nl",
+            "role": "Original Author"
+        },
+        {
+            "name": "Mage Australia",
+            "homepage": "https://mageaustralia.com.au",
+            "role": "Maho Port"
+        }
+    ],
+    "extra": {
+        "maho-module-dir": "app/code/community/Mollie/Mpm"
+    }
+}

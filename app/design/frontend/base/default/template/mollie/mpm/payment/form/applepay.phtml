@@ -1,0 +1,19 @@
+<script>
+(function() {
+    const element = document.querySelector('[value="mollie_applepay"]');
+    if (!element) return;
+
+    const parent = element.closest('dt, li, div');
+    if (!parent) return;
+
+    parent.style.display = 'none';
+
+    try {
+        if (window.ApplePaySession && window.ApplePaySession.canMakePayments()) {
+            parent.style.display = '';
+        }
+    } catch (error) {
+        console.warn('Error when trying to check Apple Pay:', error);
+    }
+})();
+</script>

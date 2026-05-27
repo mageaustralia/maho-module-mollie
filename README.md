@@ -1,6 +1,7 @@
-# Mollie Payment Module for Maho
+> [!WARNING]
+> **Alpha — untested in production.** This module is a port of the original [Mollie Magento 1 module](https://github.com/mollie/Magento) but we **cannot perform end-to-end testing ourselves**: MageAustralia is based outside the EU and Mollie does not issue merchant accounts to non-EU entities, so we cannot exercise the live payment flow against a Mollie test/production environment. Community testing, screenshots, and bug reports are very welcome — open an issue or PR.
 
-> **Alpha Release** — This module has been ported from the original [Mollie Magento 1 module](https://github.com/mollie/Magento) but is currently **untested in production**. We are based outside the EU and cannot obtain a Mollie merchant account to perform end-to-end testing. Community testing and feedback is very welcome.
+# Mollie Payment Module for Maho
 
 A comprehensive Mollie payment gateway integration for [Maho](https://github.com/MahoCommerce/maho), supporting 20+ payment methods across Europe.
 

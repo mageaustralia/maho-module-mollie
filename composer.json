@@ -1,6 +1,6 @@
 {
     "name": "mageaustralia/maho-module-mollie",
-    "license": "BSD-2-Clause",
+    "license": "OSL-3.0",
     "type": "maho-module",
     "description": "Mollie payment gateway integration for Maho. Supports iDEAL, Credit Card, Bancontact, SOFORT, Bank Transfer, PayPal, Klarna, Apple Pay, and more.",
     "keywords": [

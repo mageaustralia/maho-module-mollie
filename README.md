@@ -100,7 +100,7 @@ This is a port of [mollie/Magento v5.9.0](https://github.com/mollie/Magento) wit
 
 ## License
 
-BSD-2-Clause — see [LICENSE](LICENSE) for details.
+OSL-3.0 for the combined work (with Mollie BSD-2-Clause attribution preserved for upstream code) — see [LICENSE](LICENSE).
 
 Original module copyright (c) 2012-2019 Mollie B.V.
 Maho port copyright (c) 2026 Mage Australia.

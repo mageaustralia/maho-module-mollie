@@ -219,7 +219,13 @@ class Mollie_Mpm_ApiController extends Mage_Core_Controller_Front_Action
             return;
         }
 
-        if (!empty($status['success'])) {
+        // Only reveal the success page when this request owns the order: the
+        // checkout session's last order id must match. checkCheckoutSession()
+        // sets it only when the payment_token matches (same session already has
+        // it), so a tokenless caller passing an arbitrary sequential order_id
+        // cannot use the success/cart redirect as a paid/not-paid oracle.
+        $session = Mage::getSingleton('checkout/session');
+        if (!empty($status['success']) && (int) $session->getLastOrderId() === $orderId) {
             $this->_redirect('checkout/onepage/success?utm_nooverride=1');
             return;
         } else {

@@ -78,7 +78,7 @@ class Mollie_Mpm_Helper_Test extends Mollie_Mpm_Helper_Data
                 } catch (\Exception $e) {
                     $results[] = '<span class="mollie-error">' . $this->__(
                         'Test API-key: %s',
-                        $e->getMessage()
+                        $this->escapeHtml($e->getMessage())
                     ) . '</span>';
                 }
             }
@@ -115,7 +115,7 @@ class Mollie_Mpm_Helper_Test extends Mollie_Mpm_Helper_Data
                 } catch (\Exception $e) {
                     $results[] = '<span class="mollie-error">' . $this->__(
                         'Live API-key: %s',
-                        $e->getMessage()
+                        $this->escapeHtml($e->getMessage())
                     ) . '</span>';
                 }
             }

@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+
+use Maho\Config\Route;
 /**
  * Copyright (c) 2012-2019, 2026 Mage Australia, Mollie B.V.
  * All rights reserved.
@@ -71,6 +73,7 @@ class Mollie_Mpm_Adminhtml_MollieController extends Mage_Adminhtml_Controller_Ac
     /**
      * API-Key Test Action
      */
+    #[Route('/admin/adminhtml_mollie/apitest', methods: ['GET', 'POST'])]
     public function apitestAction()
     {
         $apiCheck = $this->mollieHelper->checkApiInstalled();
@@ -91,6 +94,7 @@ class Mollie_Mpm_Adminhtml_MollieController extends Mage_Adminhtml_Controller_Ac
     /**
      * Selftest Action
      */
+    #[Route('/admin/adminhtml_mollie/selftest', methods: ['GET', 'POST'])]
     public function selftestAction()
     {
         $apiCheck = $this->mollieHelper->checkApiInstalled();
@@ -107,6 +111,7 @@ class Mollie_Mpm_Adminhtml_MollieController extends Mage_Adminhtml_Controller_Ac
     /**
      * External Redirect to Mollie Account.
      */
+    #[Route('/admin/adminhtml_mollie/profiles', methods: ['GET'])]
     public function profilesAction()
     {
         $this->_redirectUrl('https://www.mollie.nl/beheer/account/profielen/');
@@ -115,6 +120,7 @@ class Mollie_Mpm_Adminhtml_MollieController extends Mage_Adminhtml_Controller_Ac
     /**
      * External Redirect to Mollie Beheer.
      */
+    #[Route('/admin/adminhtml_mollie/dashboard', methods: ['GET'])]
     public function dashboardAction()
     {
         $this->_redirectUrl('https://www.mollie.nl/beheer');

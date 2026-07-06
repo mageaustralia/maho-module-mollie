@@ -1,5 +1,7 @@
 <?php
 declare(strict_types=1);
+
+use Maho\Config\Route;
 /**
  * Copyright (c) 2012-2019, 2026 Mage Australia, Mollie B.V.
  * All rights reserved.
@@ -79,6 +81,7 @@ class Mollie_Mpm_ApiController extends Mage_Core_Controller_Front_Action
     /**
      * Payment Action.
      */
+    #[Route('/mpm/api/payment', methods: ['GET', 'POST'])]
     public function paymentAction()
     {
         try {
@@ -164,6 +167,7 @@ class Mollie_Mpm_ApiController extends Mage_Core_Controller_Front_Action
     /**
      * Webhook Action.
      */
+    #[Route('/mpm/api/webhook', methods: ['GET', 'POST'])]
     public function webhookAction()
     {
         $params = $this->getRequest()->getParams();
@@ -189,6 +193,7 @@ class Mollie_Mpm_ApiController extends Mage_Core_Controller_Front_Action
     /**
      * Return Action.
      */
+    #[Route('/mpm/api/return', methods: ['GET'])]
     public function returnAction()
     {
         $orderId = $this->getRequest()->getParam('order_id');
@@ -244,6 +249,7 @@ class Mollie_Mpm_ApiController extends Mage_Core_Controller_Front_Action
     /**
      * Redirect Action.
      */
+    #[Route('/mpm/api/redirect', methods: ['GET'])]
     public function redirectAction()
     {
         $this->loadLayout();
